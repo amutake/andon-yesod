@@ -35,3 +35,9 @@ instance Read OrdInt where
         
     readListPrec = readListPrecDefault
 
+data Prize = Grand
+           | Gold
+           | Silver
+           | Bronze
+           | None
+           deriving (Show, Read, Eq)
