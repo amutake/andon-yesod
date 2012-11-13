@@ -1,0 +1,5 @@
+dist/
+cabal-dev/
+static/tmp/
+.static-cache
+*.sqlite3
