@@ -1,4 +1,8 @@
-module Andon.Types where
+module Andon.Types
+    ( OrdInt(..)
+    , Prize(..)
+    , Class(..)
+    ) where
 
 import Text.Read
 import Data.Text
@@ -53,4 +57,3 @@ instance Eq Class where
     c1 == c2 = getTimes c1 == getTimes c2 &&
                getGrade c1 == getGrade c2 &&
                getClass c1 == getClass c2
-
