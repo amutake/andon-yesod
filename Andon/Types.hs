@@ -39,7 +39,6 @@ data Prize = Grand
            | Gold
            | Silver
            | Bronze
-           | None
            deriving (Show, Read, Eq)
                     
 data Class = Class
@@ -47,7 +46,7 @@ data Class = Class
     , getGrade :: Int
     , getClass :: Int
     , getTitle :: Text
-    , getPrize :: Prize
+    , getPrize :: Maybe Prize
     } 
 
 instance Eq Class where
