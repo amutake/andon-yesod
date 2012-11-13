@@ -1,6 +1,7 @@
 module Andon.Types where
 
 import Text.Read
+import Data.Text
 
 -- | OrdInt 1 = 1st, OrdInt 2 = 2nd ...
 newtype OrdInt = OrdInt
@@ -32,7 +33,6 @@ instance Read OrdInt where
                 returnOrdInt n
       where
         returnOrdInt = return . OrdInt . fromInteger
-        
     readListPrec = readListPrecDefault
 
 data Prize = Grand
@@ -41,3 +41,17 @@ data Prize = Grand
            | Bronze
            | None
            deriving (Show, Read, Eq)
+                    
+data Class = Class
+    { getTimes :: OrdInt
+    , getGrade :: Int
+    , getClass :: Int
+    , getTitle :: Text
+    , getPrize :: Prize
+    } 
+
+instance Eq Class where
+    c1 == c2 = getTimes c1 == getTimes c2 &&
+               getGrade c1 == getGrade c2 &&
+               getClass c1 == getClass c2
+
