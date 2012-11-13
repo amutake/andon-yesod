@@ -83,6 +83,8 @@ instance Yesod App where
             $(widgetFile "normalize")
             addStylesheet $ StaticR css_bootstrap_css
             $(widgetFile "default-layout")
+            addScript $ StaticR js_windowsize_js
+            $(widgetFile "background")
         hamletToRepHtml $(hamletFile "templates/default-layout-wrapper.hamlet")
 
     -- This is done to provide an optimization for serving static files from

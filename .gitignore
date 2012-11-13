@@ -4,3 +4,4 @@ static/tmp/
 .static-cache
 *.sqlite3
 *.aes
+static/img/material/background/backup/

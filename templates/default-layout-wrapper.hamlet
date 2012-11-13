@@ -8,7 +8,8 @@ $newline never
     <head>
         <meta charset="UTF-8">
 
-        <title>#{pageTitle pc}
+        <title>#{pageTitle pc} - 行灯職人への道
+        <meta name="keywords" content="行灯職人への道,行灯,行灯行列,行灯職人,札幌北高校,札幌北,札北,北高,ねぶた,学校祭">
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -19,16 +20,42 @@ $newline never
         \<!--[if lt IE 9]>
         \<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         \<![endif]-->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+        
+        <script src=@{StaticR js_windowsize_js}>
 
         <script>
           document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
     <body>
-        <div class="container">
+        <div #background>
+        <div #container>
             <header>
-            <div id="main" role="main">
+                <div #header-wrapper>
+                    <h1 role="banner">
+                        <a href=@{RootR}>
+                            <img src=@{StaticR img_material_logo_png} alt="logo">
+                    <nav #globalnav role="navigation">
+                        <ul>
+                            <li>
+                                <a href=#{appRoot $ settings master}>
+                                    Information
+                            <li>
+                                <a href="">
+                                    Gallery
+                            <li>
+                                <a href="#">
+                                    Howto
+                            <li>
+                                <a href="#">
+                                    Data
+                            <li>
+                                <a href="">
+                                    BBS        
+            <div #main role="main">
               ^{pageBody pc}
             <footer>
-                #{extraCopyright $ appExtra $ settings master}
+                <p>&copy; #{extraCopyright $ appExtra $ settings master}
 
         $maybe analytics <- extraAnalytics $ appExtra $ settings master
             <script>

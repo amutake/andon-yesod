@@ -1,0 +1,96 @@
+@contentsWidth: 900px;
+@contentsHeight: 600px;
+body {
+    width: 100%;
+    min-width: #{contentsWidth};
+    overflow: hidden;
+}
+
+#background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: #{contentsWidth};
+    height: 100%;
+    background-color: black;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    min-width: #{contentsWidth};
+    height: 100%;
+    z-index: 100;
+    
+}
+@headerHeight: 50px;
+@logoHeight: 40px;
+header {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: #{headerHeight};
+    background-color: rgba(255, 255, 255, 0.05);
+    #header-wrapper {
+        width: #{contentsWidth};
+        height: 100%;
+        margin: 0 auto;
+        h1 {
+            float: left;
+            padding: 5px 0 5px;
+            img {
+                height: #{logoHeight};
+            }
+        }   
+        nav {
+            width: 80%;
+            height: #{headerHeight};
+            float: right;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    float: left;
+                    width: 25%;                 
+                    height: #{headerHeight};
+                    text-align: center;                    
+                    line-height: #{headerHeight};
+                    a {
+                        font-size: 0.8rem;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#main {
+    width: 800px;
+    height: 80%;
+    margin: 20px auto;
+    padding: 30px 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    
+    color: #ccc;
+
+    
+}
+
+footer {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    p {
+        text-align: right;
+        color: gray;
+    }
+}

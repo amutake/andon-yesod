@@ -1,0 +1,138 @@
+// background.js
+function random(n) {
+    return Math.floor(Math.random() * n);
+}
+
+function backgroundImages() {    
+    var $img1 = $("<img>").attr("src", "@{StaticR img_material_background_1_jpg}")
+        .css({
+            zIndex : 17,
+            opacity : 1
+        });
+    var $img2 = $("<img>").attr("src", "@{StaticR img_material_background_2_jpg}")
+        .css({
+            zIndex : 16,
+            opacity : 1
+        });
+    var $img3 = $("<img>").attr("src", "@{StaticR img_material_background_3_jpg}")
+        .css({
+            zIndex : 15,
+            opacity : 1
+        });
+    var $img4 = $("<img>").attr("src", "@{StaticR img_material_background_4_jpg}")
+        .css({
+            zIndex : 14,
+            opacity : 1
+        });
+    var $img5 = $("<img>").attr("src", "@{StaticR img_material_background_5_jpg}")
+        .css({
+            zIndex : 13,
+            opacity : 1
+        });
+    var $img6 = $("<img>").attr("src", "@{StaticR img_material_background_6_jpg}")
+        .css({
+            zIndex : 12,
+            opacity : 1
+        });
+    var $img7 = $("<img>").attr("src", "@{StaticR img_material_background_7_jpg}")
+        .css({
+            zIndex : 11,
+            opacity : 0.8
+        });
+    var $img8 = $("<img>").attr("src", "@{StaticR img_material_background_8_jpg}")
+        .css({
+            zIndex : 10,
+            opacity : 0.8
+        });
+    var $img9 = $("<img>").attr("src", "@{StaticR img_material_background_9_jpg}")
+        .css({
+            zIndex : 9,
+            opacity : 0.6
+        });
+    var $img10 = $("<img>").attr("src", "@{StaticR img_material_background_10_jpg}")
+        .css({
+            zIndex : 8,
+            opacity : 0.6
+        });
+    var $img11 = $("<img>").attr("src", "@{StaticR img_material_background_11_jpg}")
+        .css({
+            zIndex : 7,
+            opacity : 0.6
+        });
+    var $img12 = $("<img>").attr("src", "@{StaticR img_material_background_12_jpg}")
+        .css({
+            zIndex : 6,
+            opacity : 0.6
+        });
+    var $img13 = $("<img>").attr("src", "@{StaticR img_material_background_13_jpg}")
+        .css({
+            zIndex : 5,
+            opacity : 0.6
+        });
+    var $img14 = $("<img>").attr("src", "@{StaticR img_material_background_14_jpg}")
+        .css({
+            zIndex : 4,
+            opacity : 0.6
+        });
+    var $img15 = $("<img>").attr("src", "@{StaticR img_material_background_15_jpg}")
+        .css({
+            zIndex : 3,
+            opacity : 0.5
+        });
+    var $img16 = $("<img>").attr("src", "@{StaticR img_material_background_16_jpg}")
+        .css({
+            zIndex : 2,
+            opacity : 0.5
+        });
+    var $img17 = $("<img>").attr("src", "@{StaticR img_material_background_17_jpg}")
+        .css({
+            zIndex : 1,
+            opacity : 0.5
+        });
+    var $imgs = [$img1, $img2, $img3, $img4, $img5, $img6, $img7, $img8, $img9, $img10, $img11, $img12, $img13, $img14, $img15, $img16, $img17];
+    return $imgs;
+}
+
+$(function () {
+    var clientWidth = document.documentElement.clientWidth;
+    var clientHeight = document.documentElement.clientHeight;
+    var $background = $("#background");
+    var $imgs = backgroundImages();
+    var speed = [1.5, 1.4, 1.3, 1.2, 1.1, 1, 0.9, 0.8, 0.7, 0.65, 0.6, 0.55, 0.5, 0.4, 0.3, 0.25, 0.2];
+
+    // * initial setting
+    for (var i = 0; i < $imgs.length; i++) {
+        $imgs[i].css({
+            position : "absolute",
+            left : random(clientWidth - 200),
+            top : random(clientHeight) * 3
+        });   
+    }
+    // append jQuery object
+    $background.empty();// jScrollPane入れたらなんか2つ出るようになったからこれでとりあえず。
+    for (var i = 0; i < $imgs.length; i++) {
+        $background.append($imgs[i]);
+    }
+
+    // calculate next point
+    var nextPoint = function(top, speed) {
+        if (top.slice(0, -2) < -300) {
+            return {
+                left : random(clientWidth - 200),
+                top : clientHeight + random(clientHeight) * 3
+            };
+        } else {
+            return {top : "-=" + speed + "px"};
+        }
+    };
+
+    // * loop
+    setInterval(function() {
+        for (var i = 0; i < $imgs.length; i++) {
+            $imgs[i].css(nextPoint($imgs[i].css("top"), speed[i]));
+        }
+        
+    }, 50); // fps = 50
+
+});
+

@@ -1,0 +1,27 @@
+$(function() {
+    // * header animation
+    // set start-point
+    var $header = $("header").css({
+        bottom : "-50px"
+    });
+    // animate
+    var id1 = setInterval(function() {
+        $header.animate({
+            bottom : "20px"
+        }, 1000);
+        clearInterval(id1);
+    }, 500);
+    
+    // * logo animation
+    // set start-point
+    var $logo = $("#top_logo").hide();
+    $logo.css({
+        marginTop : (document.documentElement.clientHeight - 110) / 2 - 80
+    });
+    // animate
+    var id2 = setInterval(function() {
+        $logo.fadeIn(3000);
+        clearInterval(id2);
+    }, 1500);
+});
+
