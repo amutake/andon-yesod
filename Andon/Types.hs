@@ -4,6 +4,7 @@ module Andon.Types
     , Class(..)
     ) where
 
+import Yesod.Dispatch
 import Prelude
 import Text.Read
 import Data.Text
@@ -40,12 +41,26 @@ instance Read OrdInt where
         returnOrdInt = return . OrdInt . fromInteger
     readListPrec = readListPrecDefault
 
+instance PathPiece OrdInt where
+    toPathPiece i = pack $ show i
+    fromPathPiece t = case reads $ unpack t of
+        [(i, "")] -> Just i
+        _ -> Nothing
+          
+-- | Prize
 data Prize = Grand
            | Gold
            | Silver
            | Bronze
-           deriving (Show, Read, Eq)
-                    
+           deriving (Read, Eq)
+
+instance Show Prize where
+    show Grand = "行灯大賞"
+    show Gold = "金賞"
+    show Silver = "銀賞"
+    show Bronze = "銅賞"
+
+-- | Class
 data Class = Class
     { getTimes :: OrdInt
     , getGrade :: Int

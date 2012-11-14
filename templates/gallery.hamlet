@@ -3,7 +3,7 @@
   $forall times <- reverse $ M.keys themeMap
     $maybe theme <- M.lookup times themeMap
       <li>
-        <a href="#">
+        <a href="@{TimesGalleryR times}">
           <img src="./static/img/material/logo.png">
           #{show times}
           #{theme}

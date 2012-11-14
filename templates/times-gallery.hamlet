@@ -1,0 +1,10 @@
+<h1>Gallery #{show times}
+<ul>
+  $forall class <- classes
+    <li>
+      <a href="">
+        <img src="">
+        #{show $ getGrade class}-#{show $ getClass class} #{getTitle class} 
+        $maybe prize <- getPrize class
+          #{show prize}
+        $nothing

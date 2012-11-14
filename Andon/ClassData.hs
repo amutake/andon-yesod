@@ -7,15 +7,13 @@ import Prelude
 import Data.Text
 import Andon.Types
 
--- make class
-mkc :: Int
-    -> Int
-    -> Int
-    -> Text
-    -> Maybe Prize
-    -> Class
-mkc t g c t' p = Class (OrdInt t) g c t' p
+-- sortClass :: [Class] -> [Class]
+-- sortClass = sortBy compareClass
+--   where
+--     compareClass a b = case compare (getTimes a) (getTimes b) of
+--         GT -> 
 
+-- mkc :: Int -> Int -> Int -> Text -> Maybe Prize
 classData :: [Class]
 classData = [ -- | 63rd
               mkc 63 1 1 "南北朱武大図" (Just Gold)
@@ -45,3 +43,5 @@ classData = [ -- | 63rd
             , mkc 63 3 7 "鳳凰無双" Nothing
             , mkc 63 3 8 "怪力乱神" Nothing
             ]
+  where
+    mkc t g c t' p = Class (OrdInt t) g c t' p
