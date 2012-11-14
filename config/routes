@@ -6,3 +6,5 @@
 
 / RootR GET
 /home HomeR GET POST
+
+/gallery GalleryR GET

@@ -4,6 +4,7 @@ module Andon.Types
     , Class(..)
     ) where
 
+import Prelude
 import Text.Read
 import Data.Text
 

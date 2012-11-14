@@ -3,6 +3,7 @@ module Andon.ClassData
     ( classData
     ) where
 
+import Prelude
 import Data.Text
 import Andon.Types
 

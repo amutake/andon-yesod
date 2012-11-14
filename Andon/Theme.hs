@@ -1,13 +1,15 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Andon.Theme where
 
+import Prelude
 import Data.Map (Map, fromList)
+import Data.Text (Text)
 import Andon.Types
 
-type Themes = Map OrdInt Text
+type ThemeMap = Map OrdInt Text
 
-themeMap :: Themes
-themeMap = fromList $ map (OrdInt . fst)
+themeMap :: ThemeMap
+themeMap = fromList $ map (\(f, s) -> (OrdInt f, s))
     [ (63, "雅")
     , (62, "蘭")
     , (61, "暒")
