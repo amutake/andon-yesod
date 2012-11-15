@@ -1,0 +1,10 @@
+<h1>Gallery #{show t} #{show g}-#{show c}
+<h2>#{getTitle cl}
+  $maybe prize <- getPrize cl
+    #{show prize}
+  $nothing
+<ul>
+  $forall path <- classImages cl
+    <li>
+      <a href="#{path}">
+          <img src=#{path}>

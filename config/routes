@@ -9,4 +9,4 @@
 
 /gallery GalleryR GET
 /gallery/#OrdInt TimesGalleryR GET
-
+/gallery/#OrdInt/#Int/#Int ClassGalleryR GET

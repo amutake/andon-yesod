@@ -3,7 +3,7 @@
   $forall class <- classes
     $maybe path <- M.lookup class classTopImageMap
       <li>
-        <a href="#">
+        <a href="@{ClassGalleryR times (getGrade class) (getClass class)}">
           <img src=#{path}>
           #{show $ getGrade class}-#{show $ getClass class}
           #{getTitle class}

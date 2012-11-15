@@ -32,6 +32,7 @@ library
                      Handler.Root
                      Handler.Gallery
                      Handler.TimesGallery
+                     Handler.ClassGallery
                      Andon.Types
                      Andon.ClassData
                      Andon.Theme
