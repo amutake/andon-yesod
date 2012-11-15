@@ -4,7 +4,9 @@
     $maybe theme <- M.lookup times themeMap
       <li>
         <a href="@{TimesGalleryR times}">
-          <img src="./static/img/material/logo.png">
+          $maybe path <- M.lookup times grandTopImageMap
+            <img src="#{path}">
+          $nothing
           #{show times}
           #{theme}
     $nothing
