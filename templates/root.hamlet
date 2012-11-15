@@ -1,2 +1,1 @@
-<img id="top_logo" src=@{StaticR img_material_logo_png}>
-
+<img id="top_logo" src=@{StaticR img_material_logo_png} alt="logo top" width="400px" height="160px">

@@ -7,16 +7,16 @@ $(function() {
     // animate
     var id1 = setInterval(function() {
         $header.animate({
-            bottom : "20px"
+            bottom : "14px"
         }, 1000);
         clearInterval(id1);
-    }, 500);
-    
+    }, 200);
+
     // * logo animation
     // set start-point
     var $logo = $("#top_logo").hide();
     $logo.css({
-        marginTop : (document.documentElement.clientHeight - 110) / 2 - 80
+        marginTop : $("#main").height() / 2 - 80
     });
     // animate
     var id2 = setInterval(function() {
@@ -24,4 +24,3 @@ $(function() {
         clearInterval(id2);
     }, 1500);
 });
-
