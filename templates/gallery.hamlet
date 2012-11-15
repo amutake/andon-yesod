@@ -1,12 +1,20 @@
-<h1>Gallery
-<ul>
+<ul #gallery>
   $forall times <- reverse $ M.keys themeMap
     $maybe theme <- M.lookup times themeMap
-      <li>
-        <a href="@{TimesGalleryR times}">
-          $maybe path <- M.lookup times grandTopImageMap
-            <img src="#{path}">
-          $nothing
-          #{show times}
-          #{theme}
+      $if times == lastFes
+        <li #last-fes>
+          <a href="@{TimesGalleryR times}">
+            $maybe path <- M.lookup times grandTopImageMap
+              <img src="#{path}" alt="#{show times}" width="520px" height="390px">
+            $nothing
+            <span .times>#{show times}
+            <span .theme>#{theme}
+      $else
+        <li>
+          <a href="@{TimesGalleryR times}">
+            $maybe path <- M.lookup times grandTopImageMap
+              <img src="#{path}" alt="#{show times}" width="280px" height="210px">
+            $nothing
+            <span .times>#{show times}
+            <span .theme>#{theme}
     $nothing

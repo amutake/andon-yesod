@@ -8,6 +8,9 @@ import Andon.Types
 
 type ThemeMap = Map OrdInt Text
 
+lastFes :: OrdInt
+lastFes = OrdInt 63
+
 themeMap :: ThemeMap
 themeMap = fromList $ map (\(f, s) -> (OrdInt f, s))
     [ (63, "雅")

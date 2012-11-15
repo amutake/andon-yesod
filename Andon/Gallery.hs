@@ -44,7 +44,9 @@ takeImages dir = unsafePerformIO $ do
             filenames <- getDirectoryContents dir >>= filterM (return . isImage)
             return $ map (dir ++) filenames
         else return []
-
+--
+-- exposed functions
+--
 grandTopImageMap :: Map OrdInt FilePath
 grandTopImageMap = M.fromList $ zip times paths
   where

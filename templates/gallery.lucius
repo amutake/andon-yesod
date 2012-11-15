@@ -1,0 +1,23 @@
+#gallery {
+    li {
+        float: left;
+        width: 400px;
+        height: auto;
+        margin: 10px;
+        span {
+            margin-left: 0.4em;
+            font-family: serif;
+            font-size: 1.2em;
+        }
+    }
+    #last-fes {
+        width: 800px;
+        height: auto;
+        img {
+            margin-right: 30px;
+        }
+        span {
+            font-size: 3em;
+        }
+    }
+}

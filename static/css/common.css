@@ -1,169 +1,17 @@
 body {
-	background-image: url(../images/material/back.jpg);
-	background-repeat: no-repeat;
-	background-position: 45% 70%;
-	background-attachment: fixed;
-	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serifs;
-	
-	margin: 0px 20px;
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, sans-serifs;
 }
 
-#container {
-	position: relative;
-	width: 980px;
-	margin: 30px auto;
+li {
+    list-style-type: none;
 }
 
-#header {
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	float: left;
-	width: 200px;
-	position: fixed;
-	top: 0px;
-	left: 20px;
+a:link {
+    color: white;
 }
-
-#header p {
-	color: #ffffff;
-	font-size: 0.85em;
+a:visited {
+    color: white;
 }
-
-#header p a {
-	color: #aaaaff;
-}
-
-#header p a:hover {
-	text-decoration: underline;
-	color: #ffffff;
-}
-
-#logo {
-}
-
-#menu {
-	margin-bottom: 20px;
-}
-
-#menu ul {
-	margin: 0;
-	padding: 0;
-}
-
-#menu li {
-	list-style-type: none;
-	width: 200px;
-	height: 30px;
-}
-
-#menu li a {
-	display: block;
-	text-decoration: none;
-	width: 180px;
-	line-height: 30px;
-	padding-left: 20px;
-	color: #bbbbbb;
-}
-
-#current {
-	border-left: solid 5px #aa0000;
-	padding-left: 15px !important;
-	color: #ffffff !important;
-}
-
-#menu li a:hover {
-	border-left: solid 5px #cccccc;
-	padding-left: 15px;
-	color: #ffffff;
-}
-
-#contents {
-	background-color: rgba(0,0,0,0.6);
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	float: right;
-	width: 750px;
-	margin-bottom: 10px;
-	color: #ffffff;
-	overflow: hidden;
-}
-
-#contents h2 {
-	background-image:url(../images/material/h2.png);
-	padding: 10px 30px 10px;
-	margin: 10px 0;
-	font-size: 1.5em;
-	font-weight: 500;
-}
-
-#contents h3 {
-	padding: 0 10px;
-	font-size: 1.2em;
-	font-weight: 500;
-	border-bottom: solid 1px #880000;
-	border-left: solid 3px #880000;
-	margin: 30px 10px;
-}
-
-#contents h4 {
-	padding: 0 10px;
-	font-size: 0.95em;
-	font-weight: 400;
-	border-left: solid 3px #880000;
-	margin: 20px 15px;
-}
-
-#contents p {
-	margin: 1.5em 1em;
-	font-size: 0.9em;
-	line-height: 2em;
-	color: #fafafa;
-}
-
-#contents li {
-	font-size:0.9em;
-  margin-bottom: 10px;
-}
-
-#footer {
-	clear: both;
-	width: 750px;
-	font-size: 0.75em;
-	padding-top: 6px;
-	margin-left: 230px;
-}
-
-#footer p {
-	clear: both;
-	margin: 0;
-	text-align: center;
-	color: #ffffff;
-}
-
-#footmenu {
-	width: 140px;
-	height: 20px;
-	margin: 10px auto;
-}
-
-#footmenu ul {
-	padding: 0;
-	overflow: hidden;
-}
-
-#footmenu li {
-	
-	padding: 0 1em;
-	border-left: 1px dotted #888888;
-	float: left;
-	margin-left: -1px;
-}
-
-#footmenu li a {
-	color: #bbbbbb;
-}
-
-#footmenu li a:hover {
-	color: #ffffff;
+a:hover {
+    color: aqua;
 }
