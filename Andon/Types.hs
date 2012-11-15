@@ -46,7 +46,7 @@ instance PathPiece OrdInt where
     fromPathPiece t = case reads $ unpack t of
         [(i, "")] -> Just i
         _ -> Nothing
-          
+
 -- | Prize
 data Prize = Grand
            | Gold
@@ -67,9 +67,18 @@ data Class = Class
     , getClass :: Int
     , getTitle :: Text
     , getPrize :: Maybe Prize
-    } 
+    }
 
 instance Eq Class where
     c1 == c2 = getTimes c1 == getTimes c2 &&
                getGrade c1 == getGrade c2 &&
                getClass c1 == getClass c2
+
+instance Ord Class where
+    a `compare` b = case getTimes a `compare` getTimes b of
+        GT -> GT
+        LT -> LT
+        EQ -> case getGrade a `compare` getGrade b of
+            GT -> GT
+            LT -> LT
+            EQ -> getClass a `compare` getClass b
