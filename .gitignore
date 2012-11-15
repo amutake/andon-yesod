@@ -5,3 +5,5 @@ static/tmp/
 *.sqlite3
 *.aes
 static/img/material/background/backup/
+static/img/gallery/
+

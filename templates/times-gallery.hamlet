@@ -1,10 +1,13 @@
 <h1>Gallery #{show times}
 <ul>
   $forall class <- classes
-    <li>
-      <a href="">
-        <img src="">
-        #{show $ getGrade class}-#{show $ getClass class} #{getTitle class} 
-        $maybe prize <- getPrize class
-          #{show prize}
-        $nothing
+    $maybe path <- M.lookup class classTopImageMap
+      <li>
+        <a href="#">
+          <img src=#{path}>
+          #{show $ getGrade class}-#{show $ getClass class}
+          #{getTitle class}
+          $maybe prize <- getPrize class
+            #{show prize}
+          $nothing
+    $nothing
