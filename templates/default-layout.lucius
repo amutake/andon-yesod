@@ -1,8 +1,15 @@
-@contentsWidth: 900px;
-@contentsHeight: 600px;
+@mainWidth: 1000px;
+@mainContentWidth: 900px; /* mainWidth - 50px * 2 */
+@mainHeight: 300px;
+@mainContentHeight: 240px; /* mainHeight - 30px * 2 */
+@headerHeight: 50px;
+@logoHeight: 40px; /* headerHeight - 10 */
+@marginHeight: 14px;
+@bodyHeight: 392px; /* mainHeight + headerHeight + marginHeight * 3 */
 body {
-    width: 100%;
-    min-width: #{contentsWidth};
+    min-width: #{mainWidth};
+    min-height: #{bodyHeight};
+    margin: 0;
     overflow: hidden;
 }
 
@@ -11,8 +18,9 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    min-width: #{contentsWidth};
+    min-width: #{mainWidth};
     height: 100%;
+    min-height: #{bodyHeight};
     background-color: black;
     z-index: 0;
     overflow: hidden;
@@ -24,22 +32,22 @@ body {
     top: 0;
     margin: 0;
     width: 100%;
-    min-width: #{contentsWidth};
+    min-width: #{mainWidth};
     height: 100%;
+    min-height: #{bodyHeight};
     z-index: 100;
-    
+    overflow: hidden;
 }
-@headerHeight: 50px;
-@logoHeight: 40px;
+
 header {
     position: absolute;
-    bottom: 20px;
     left: 0;
+    bottom: #{marginHeight};
     width: 100%;
     height: #{headerHeight};
     background-color: rgba(255, 255, 255, 0.05);
     #header-wrapper {
-        width: #{contentsWidth};
+        width: #{mainWidth};
         height: 100%;
         margin: 0 auto;
         h1 {
@@ -48,7 +56,7 @@ header {
             img {
                 height: #{logoHeight};
             }
-        }   
+        }
         nav {
             width: 80%;
             height: #{headerHeight};
@@ -58,9 +66,9 @@ header {
                 padding: 0;
                 li {
                     float: left;
-                    width: 25%;                 
+                    width: 25%;
                     height: #{headerHeight};
-                    text-align: center;                    
+                    text-align: center;
                     line-height: #{headerHeight};
                     a {
                         font-size: 0.8rem;
@@ -73,22 +81,20 @@ header {
 }
 
 #main {
-    width: 800px;
-    height: 80%;
-    margin: 20px auto;
+    width: #{mainContentWidth};
+    height: 80%; /* for no-js */
+    min-height: #{mainContentHeight};
+    margin: #{marginHeight} auto 0;
     padding: 30px 50px;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: auto;
-    
     color: #ccc;
-
-    
 }
 
 footer {
     position: absolute;
     right: 20px;
-    bottom: 20px;
+    bottom: #{marginHeight};
     p {
         text-align: right;
         color: gray;

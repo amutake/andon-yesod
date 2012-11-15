@@ -1,31 +1,13 @@
-$(function() {    
-    // window size etc...
-    var clientWidth = document.documentElement.clientWidth;
-    var clientHeight = document.documentElement.clientHeight;
-    var $body = $("body").css({
-        // width : "100%",
-        minHeight : clientHeight
-    });
-    var $main = $("#main").css({
-        height : clientHeight - 120
-    });
+$(function() {
+    // set main height
+    var setHeight = function() {
+        var containerHeight = $("#container").height();
+        var $main = $("#main").css({
+            // container - (margin * 3 + header) - padding
+            height : containerHeight - 92 - 60
+        });
+    };
+    setHeight();
     // resize
-    $(window).resize(function() {
-        clientWidth = document.documentElement.clientWidth;
-        clientHeight = document.documentElement.clientHeight;
-        $body.css({
-            // width : clientWidth,
-            minHeight : clientHeight
-        });
-        $main.css({
-            height : clientHeight - 120
-        });
-        
-        // // scroll bar reset
-        // $main.jScrollPane();
-
-    });
-    
-    // // scroll bar
-    // $main.jScrollPane();
+    $(window).resize(setHeight);
 });
