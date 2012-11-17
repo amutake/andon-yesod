@@ -61,7 +61,7 @@ classData = [ -- | 63rd
             , mkc 62 3 6 "麒麟飃爛図" (Just Bronze)
             , mkc 62 3 7 "天火明命放龍虎" (Just Gold)
             , mkc 62 3 8 "竜人不動明王ヲ討ツ" (Just Silver)
-
+            -- | 61st
             , mkc 61 1 1 "四神獣" (Just Silver)
             , mkc 61 1 2 "鬼退治" Nothing
             , mkc 61 1 3 "藤安権三の龍退治" Nothing
@@ -175,7 +175,7 @@ classData = [ -- | 63rd
             , mkc 58 3 7 "公孫勝龍ヲ喚ブ" (Just Silver)
             , mkc 58 3 8 "西遊記―天竺に行きましょう" Nothing
             , mkc 58 3 9 "明王焔武" Nothing
-
+            -- | 57th
             , mkc 57 1 1 "天狗乱舞" Nothing
             , mkc 57 1 2 "雷神～闇天響奏雷鼓" Nothing
             , mkc 57 1 3 "天狗九尾狩" Nothing
@@ -205,7 +205,7 @@ classData = [ -- | 63rd
             , mkc 57 3 7 "天神地祇　杯ヲ交ワス" Nothing
             , mkc 57 3 8 "威風" (Just Silver)
             , mkc 57 3 9 "伊邪那岐之涙" (Just Grand)
-
+            -- | 56th
             , mkc 56 1 1 "遠山金四郎百花繚乱桜舞" (Just Silver)
             , mkc 56 1 2 "スキ×４　一休さん" Nothing
             , mkc 56 1 3 "水龍下の儀" Nothing
@@ -235,7 +235,7 @@ classData = [ -- | 63rd
             , mkc 56 3 7 "瓢箪送り" (Just Silver)
             , mkc 56 3 8 "琉球獅子外伝" Nothing
             , mkc 56 3 9 "非天強襲" Nothing
-
+            -- | 55th
             , mkc 55 1 1 "鬼神乱舞" Nothing
             , mkc 55 1 2 "炎中戦" (Just Bronze)
             , mkc 55 1 3 "天狗乱舞" Nothing
@@ -298,6 +298,90 @@ classData = [ -- | 63rd
             , mkc 54 3 8 "孫悟空" Nothing
             , mkc 54 3 9 "華炎" (Just Gold)
             , mkc 54 3 10 "降魔" (Just Grand)
+            -- | 53rd
+            , mkc 53 1 2 "" (Just Gold)
+
+            , mkc 53 2 (-1) "" (Just Gold)
+            , mkc 53 3 (-2) "" Nothing
+
+            , mkc 53 3 1 "" Nothing
+            , mkc 53 3 2 "" Nothing
+            , mkc 53 3 5 "" (Just Gold)
+            , mkc 53 3 6 "" Nothing
+            , mkc 53 3 7 "" (Just Grand)
+            , mkc 53 3 9 "" (Just Bronze)
+            , mkc 53 3 10 "" (Just Silver)
+            -- | 52nd
+            , mkc 52 2 (-1) "" (Just Gold)
+
+            , mkc 52 3 (-1) "" (Just Grand)
+            , mkc 52 3 (-2) "" (Just Gold)
+            , mkc 52 3 (-3) "" (Just Bronze)
+            -- | 51st
+            , mkc 51 1 (-1) "" (Just Gold)
+            , mkc 51 1 (-2) "" Nothing
+
+            , mkc 51 3 1 "" (Just Grand)
+            , mkc 51 3 2 "" Nothing
+            , mkc 51 3 3 "" Nothing
+            , mkc 51 3 6 "" (Just Gold)
+            , mkc 51 3 7 "" (Just Bronze)
+            , mkc 51 3 10 "" (Just Silver)
+            -- | 50th
+            , mkc 50 2 4 "" (Just Gold)
+            , mkc 50 2 10 "" Nothing
+
+            , mkc 50 3 1 "" (Just Silver)
+            , mkc 50 3 9 "" (Just Grand)
+            , mkc 50 3 (-1) "" (Just Gold)
+            , mkc 50 3 (-2) "" (Just Bronze)
+            , mkc 50 3 (-3) "" Nothing
+            -- | 49th
+            , mkc 49 3 (-1) "" (Just Grand)
+            , mkc 49 3 (-2) "" (Just Gold)
+            , mkc 49 3 (-3) "" (Just Silver)
+            , mkc 49 3 (-4) "" (Just Bronze)
+            -- | 48th
+            , mkc 48 3 10 "" (Just Grand)
+            , mkc 48 3 (-1) "" (Just Gold)
+            , mkc 48 3 (-2) "" (Just Silver)
+            , mkc 48 3 (-3) "" (Just Bronze)
+            , mkc 48 3 (-4) "" Nothing
+            , mkc 48 3 (-5) "" Nothing
+            , mkc 48 3 (-6) "" Nothing
+            , mkc 48 3 (-7) "" Nothing
+            , mkc 48 3 (-8) "" Nothing
+            , mkc 50 3 (-9) "" Nothing
+            -- | 47th
+            , mkc 47 1 5 "" Nothing
+            , mkc 47 1 7 "" (Just Gold)
+
+            , mkc 47 2 1 "" (Just Gold)
+
+            , mkc 47 3 1 "" (Just Grand)
+            , mkc 47 3 2 "" (Just Bronze)
+            , mkc 47 3 5 "" (Just Gold)
+            , mkc 47 3 7 "" (Just Silver)
+            , mkc 47 3 9 "" Nothing
+            -- | 46th
+            , mkc 46 3 3 "" (Just Bronze)
+            , mkc 46 3 8 "" (Just Grand)
+            , mkc 46 3 (-1) "" (Just Gold)
+            , mkc 46 3 (-2) "" (Just Silver)
+            -- | 45th
+            , mkc 45 3 8 "" (Just Bronze)
+            , mkc 45 3 (-1) "" (Just Grand)
+            , mkc 45 3 (-2) "" (Just Gold)
+            , mkc 45 3 (-3) "" (Just Silver)
+            -- | 44th
+            , mkc 44 3 1 "" (Just Gold)
+            , mkc 44 3 4 "" (Just Bronze)
+            , mkc 44 3 7 "" (Just Silver)
+            , mkc 44 3 10 "" (Just Grand)
+            , mkc 44 3 11 "" Nothing
+            -- | 43rd
+            , mkc 43 3 2 "" (Just Grand)
+            , mkc 43 3 9 "" (Just Gold)
             ]
   where
     mkc t g c t' p = Class (OrdInt t) g c t' p
