@@ -20,9 +20,14 @@ $newline never
         \<!--[if lt IE 9]>
         \<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         \<![endif]-->
-        <link rel="stylesheet" href=@{StaticR css_common_css}>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
 
+        <link rel="stylesheet" href=@{StaticR css_bootstrap_css}>
+        <link rel="stylesheet" href=@{StaticR js_custom_scrollbar_plugin_jquery_mCustomScrollbar_css}>
+        <link rel="stylesheet" href=@{StaticR css_common_css}>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js">
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script src=@{StaticR js_custom_scrollbar_plugin_jquery_mousewheel_min_js}>
+        <script src=@{StaticR js_custom_scrollbar_plugin_jquery_mCustomScrollbar_js}>
         <script src=@{StaticR js_windowsize_js}>
 
         <script>

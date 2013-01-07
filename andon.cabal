@@ -37,6 +37,7 @@ library
                      Andon.ClassData
                      Andon.Theme
                      Andon.Gallery
+                     Andon.Util
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT
